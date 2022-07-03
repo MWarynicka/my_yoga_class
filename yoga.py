@@ -1,4 +1,5 @@
-from title_yoga.py import introduction
+from title_yoga import introduction
+print(introduction)
 
 print("Welcome to Virtual Yoga Class")
 input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
