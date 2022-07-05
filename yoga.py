@@ -29,6 +29,7 @@ sleep(3)
 import os
 os.system('clear')
 
+print(introduction)
 input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
 input("Would you like to exercises - flow or relaxation?\n")
 
