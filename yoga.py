@@ -2,8 +2,7 @@ from title_yoga import introduction
 print(introduction)
 
 print("Welcome to Virtual Yoga Class")
-input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
-input("Would you like to exercises - flow or relaxation?\n")
+
 
 def calculator_bmi():
   
@@ -24,6 +23,9 @@ def calculator_bmi():
     return f"Your BMI is {bmi}, you are clinically obese."
 
 calculator_bmi()
+
+input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
+input("Would you like to exercises - flow or relaxation?\n")
 
 ex_for_beginner=["Trikonasana", "Bhujangasana", "Janu Sirsasana", "Ardha Matsyendrasana","Adho Mukha Svanasana", "Balasana", "Pascimottanasana", "Vrksasana","Ustrasana", "Viparita Karani Mudra", "Virabhadrasana II", "Virasana", "Upavistha", "Baddha konasana"]
 ex_for_intermediate=["Bakasana","Urdhva Dhanurasana","Ardha chandrasana", "Natarajasana"]
