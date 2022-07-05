@@ -24,6 +24,11 @@ def calculator_bmi():
 
 calculator_bmi()
 
+from time import sleep
+sleep(3)
+import os
+os.system('clear')
+
 input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
 input("Would you like to exercises - flow or relaxation?\n")
 
