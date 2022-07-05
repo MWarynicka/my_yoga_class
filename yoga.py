@@ -54,7 +54,7 @@ advanced_class += random.choices(ex_for_advanced, k=3)
 intermediate_class=[]
 intermediate_class += random.choices(ex_for_beginner, k=5)
 intermediate_class += random.choices(ex_for_intermediate, k=3)
-
+#another comment
 
 if level == "advanced":
   print(', '.join(advanced_class))
