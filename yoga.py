@@ -45,7 +45,7 @@ type_exercises()
 
 import random 
 
-
+#mix of positions
 advanced_class=[]
 advanced_class += random.choices(ex_for_beginner, k=3)
 advanced_class += random.choices(ex_for_intermediate, k=2)
