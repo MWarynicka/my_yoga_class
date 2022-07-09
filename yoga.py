@@ -31,33 +31,8 @@ ex_for_intermediate=["Bakasana","Urdhva Dhanurasana","Ardha chandrasana", "Natar
 ex_for_advanced=["Sirszasana","Hanumanasana","Sirsasana II","Pincha Mayurasana","Eka Pada Rajakapotasana"]
 
 print("Welcome to Virtual Yoga Class")
-level = input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
 
-
-def type_exercises():
-  if type == "flow":
-    print("Stay in position for 30s")
-  else:
-    print("Stay in position for 2 min")
-
-
-type_exercises()
-
-while True:
-  type = input("Would you like to exercises - flow or relaxation?\n")
-  if type == "flow":
-
-    print("Stay in position for 30s")
-    break
-  elif type == "relaxation":
-
-    print("Stay in position for 2 min")
-    break
-  else:
-    print("\nThat is incorrect, please try again.\n")
-
-
-import random 
+import random
 
 #mix of positions
 advanced_class=[]
@@ -68,19 +43,40 @@ advanced_class += random.choices(ex_for_advanced, k=3)
 intermediate_class=[]
 intermediate_class += random.choices(ex_for_beginner, k=5)
 intermediate_class += random.choices(ex_for_intermediate, k=3)
-#another comment
 
-if level == "advanced":
-  print(', '.join(advanced_class))
-elif level == "intermediate":
-  print(', '.join(intermediate_class))
-elif level == "beginner":
-  print(', '.join(random.choices(ex_for_beginner, k=8)))
+def level():
+  while True:
+    level = input("\nChoose your exercise level. Are you beginner, intermediate or advanced?\n")
+    if level == "advanced":
+      print(', '.join(advanced_class))
+      break
+    elif level == "intermediate":
+      print(', '.join(intermediate_class))
+      break
+    elif level == "beginner":
+      print(', '.join(random.choices(ex_for_beginner, k=8)))
+      break
+    else:
+      print("\nThat is incorrect, please try again.\n")
 
+def type_exercises():
+  while True:
+    type = input("\nWould you like to exercises - flow or relaxation?\n")
+    if type == "flow":
+      print("Stay in position for 30s")
+      break
+    elif type == "relaxation":
+      print("Stay in position for 2 min")
+      break
+    else:
+      print("\nThat is incorrect, please try again.\n")
+
+type_exercises()
+level()
 
 
 from yoga_dictionary import dictionary
 
-description = input("Which of these position you're not familiar with?\n")
+description = input("\nWhich of these position you're not familiar with?\n")
 print(dictionary[description])
 
