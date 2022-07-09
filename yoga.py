@@ -1,3 +1,5 @@
+
+
 from title_yoga import introduction
 print(introduction)
 
@@ -23,8 +25,6 @@ def calculator_bmi():
 calculator_bmi()
 
 
-print(introduction)
-
 #examples of exercices
 ex_for_beginner=["Trikonasana", "Bhujangasana", "Janu Sirsasana", "Ardha Matsyendrasana","Adho Mukha Svanasana", "Balasana", "Pascimottanasana", "Vrksasana","Ustrasana", "Viparita Karani Mudra", "Virabhadrasana II", "Virasana", "Upavistha", "Baddha konasana"]
 ex_for_intermediate=["Bakasana","Urdhva Dhanurasana","Ardha chandrasana", "Natarajasana"]
@@ -32,7 +32,7 @@ ex_for_advanced=["Sirszasana","Hanumanasana","Sirsasana II","Pincha Mayurasana",
 
 print("Welcome to Virtual Yoga Class")
 level = input("Choose your exercise level. Are you beginner, intermediate or advanced?\n")
-type = input("Would you like to exercises - flow or relaxation?\n")
+
 
 def type_exercises():
   if type == "flow":
@@ -40,7 +40,21 @@ def type_exercises():
   else:
     print("Stay in position for 2 min")
 
+
 type_exercises()
+
+while True:
+  type = input("Would you like to exercises - flow or relaxation?\n")
+  if type == "flow":
+
+    print("Stay in position for 30s")
+    break
+  elif type == "relaxation":
+
+    print("Stay in position for 2 min")
+    break
+  else:
+    print("\nThat is incorrect, please try again.\n")
 
 
 import random 
