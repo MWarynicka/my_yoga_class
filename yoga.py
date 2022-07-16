@@ -26,8 +26,6 @@ calculator_bmi()
 
 
 
-
-
 #examples of exercices
 ex_for_beginner=["Trikonasana", "Bhujangasana", "Janu Sirsasana", "Ardha Matsyendrasana","Adho Mukha Svanasana", "Balasana", "Pascimottanasana", "Vrksasana","Ustrasana", "Viparita Karani Mudra", "Virabhadrasana II", "Virasana", "Upavistha", "Baddha konasana"]
 ex_for_intermediate=["Bakasana","Urdhva Dhanurasana","Ardha chandrasana", "Natarajasana"]
@@ -79,18 +77,23 @@ type_exercises()
 level()
 
 
+
+
+
 from yoga_dictionary import dictionary
-
-description = input("\nWhich of these position you're not familiar with?\n")
-print(dictionary[description])
-
-
 while True:
-  continue_ex = input("\nWould you like to continue trening? Yes or No \n").lower()
-  if continue_ex== "yes":
-    type_exercises()
-    level()
-  else:
-    print("The last position for You is Savasana, please stay for 5 minutes and thank yourself for the practice. ")
-    break
+  description = input("\nWhich of these position you're not familiar with? or no\n")
+  if description !="no":
+    print(dictionary[description])
+  elif description == "no":
+    continue_ex = input("\nWould you like to continue trening? Yes or No \n").lower()
+    if continue_ex == "yes":
+      type_exercises()
+      level()
+
+    else:
+      print("The last position for You is Savasana, please stay for 5 minutes and thank yourself for the practice. ")
+      break
+
+
 
