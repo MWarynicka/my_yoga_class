@@ -82,18 +82,16 @@ level()
 
 from yoga_dictionary import dictionary
 while True:
-  description = input("\nWhich of these position you're not familiar with? or no\n")
-  if description !="no":
+  description = input("\nWhich of these position you're not familiar with? or no\n").title()
+  if description !="No":
     print(dictionary[description])
-  elif description == "no":
+  elif description == "No":
     continue_ex = input("\nWould you like to continue trening? Yes or No \n").lower()
     if continue_ex == "yes":
       type_exercises()
       level()
-
     else:
       print("The last position for You is Savasana, please stay for 5 minutes and thank yourself for the practice. ")
       break
-
 
 
